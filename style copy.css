@@ -1,0 +1,126 @@
+:root {
+    --primary: rgb(113, 218, 207);
+    --secondary: rgb(99, 26, 145);
+    --borders: 5px;
+  }
+  
+  
+  /* NOTE creates outlines for all boxes */
+  /* * {
+    outline: 2px rgba(255, 0, 0, 0.435) dashed;
+  } */
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(243, 243, 243);
+  }
+  
+  header {
+    background: var(--primary);
+    justify-content: end;
+    align-items: end;
+    padding: 3em;
+  
+  }
+  
+  /* NOTE change style of header once screen is below given pixel count */
+  @media (max-width: 756px) {
+    header {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+  
+  
+  h5 {
+    color: var(--secondary);
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  header div:first-child {
+    text-align: right;
+    padding: 2em;
+  }
+  
+  img {
+    max-width: 325px;
+    /* NOTE option two for image spill */
+    /* transform: translateY(11em); */
+  
+    /* NOTE option one for image spill */
+    position: absolute;
+    top: 6em;
+    border-radius: var(--borders);
+    box-shadow: 0px 4px 12px rgba(8, 4, 25, 0.537);
+  }
+  
+  .mark {
+    display: none;
+  }
+  
+  /* NOTE change style of img once screen is below given pixel count */
+  @media (max-width: 756px) {
+    img {
+      display: none;
+      position: unset;
+    }
+  
+    .mark {
+      display: block;
+    }
+  }
+  
+  /* NOTE option one for image spill */
+  .profile-img {
+    min-width: 325px;
+  }
+  
+  
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  .flex-column {
+    flex-direction: column;
+  }
+  
+  /* NOTE Left Side */
+  main div:first-child {
+    max-width: 60%;
+    text-align: right;
+    padding: 2em;
+  }
+  
+  /* NOTE Right Side */
+  main div:nth-child(2) {
+    margin-top: 10em;
+    padding: 2em;
+    max-width: 40%;
+  }
+  
+  /* main div {
+    outline: 2px red dashed;
+  } */
+  
+  .section-header {
+    background: var(--primary);
+    padding: .5em 1.5em;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: var(--borders);
+  }
+  
+  .loading-1 {
+    background: green;
+    min-width: 10em;
+    min-height: 1em;
+  }
+  
+  .loading-2 {
+    background: blue;
+    min-width: 8em;
+    min-height: 1em;
+  }
